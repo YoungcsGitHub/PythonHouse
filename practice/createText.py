@@ -34,11 +34,11 @@
 # for i in range(0,101, 2):
 #     print(i)
 
-def even_print():
-    for i in range(1, 100):
-        if i % 2 ==0:
-            print(i)
+# def even_print():
+#     for i in range(1, 100):
+#         if i % 2 ==0:
+#             print(i)
+#
+# even_print()
 
-even_print()
-
-
+# ########################################################
