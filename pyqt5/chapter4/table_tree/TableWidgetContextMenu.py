@@ -1,0 +1,116 @@
+# -*- coding: utf-8 -*-#
+
+#-------------------------------------------------------------------------------
+# Name:         TableWidgetContextMenu
+# Description:  
+# Author:       Dell
+# Date:         2019/10/20
+#-------------------------------------------------------------------------------
+
+'''
+在表格中显示上下文菜单
+
+1. 如何弹出菜单
+2. 如果在满足条件的情况下弹出菜单
+
+QMenu.exec_
+
+
+'''
+
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import Qt, QObject
+import sys
+
+
+class TableWidgetContextMenuDemo(QWidget):
+    def __init__(self):
+        super(TableWidgetContextMenuDemo, self).__init__()
+        self.initUI()
+
+    def initUI(self):
+        self.setWindowTitle('TableWidgetContextMenu Demo')
+        self.resize(500, 300)
+
+        layout = QHBoxLayout()
+
+        self.tablewidget = QTableWidget()
+        self.tablewidget.setRowCount(5)
+        self.tablewidget.setColumnCount(3)
+        layout.addWidget(self.tablewidget)
+
+        self.tablewidget.setHorizontalHeaderLabels(['name', 'sex', 'weight(kg)'])
+
+        newItem = QTableWidgetItem('张三')
+        self.tablewidget.setItem(0, 0,newItem)
+
+        newItem = QTableWidgetItem('李四')
+        self.tablewidget.setItem(1, 0, newItem)
+
+        newItem = QTableWidgetItem('王五')
+        self.tablewidget.setItem(2, 0, newItem)
+
+        newItem = QTableWidgetItem('男')
+        self.tablewidget.setItem(0, 1, newItem)
+
+        newItem = QTableWidgetItem('女')
+        self.tablewidget.setItem(1, 1, newItem)
+
+        newItem = QTableWidgetItem('男')
+        self.tablewidget.setItem(2, 1, newItem)
+
+        newItem = QTableWidgetItem('75')
+        self.tablewidget.setItem(0, 2, newItem)
+
+        newItem = QTableWidgetItem('59')
+        self.tablewidget.setItem(1, 2, newItem)
+
+        newItem = QTableWidgetItem('65')
+        self.tablewidget.setItem(2, 2, newItem)
+
+        # 设置允许弹出上下文菜单
+        self.tablewidget.setContextMenuPolicy(Qt.CustomContextMenu)
+
+        # 定制上下文菜单信号，并连接到槽函数
+        self.tablewidget.customContextMenuRequested.connect(self.generateMenu)
+
+
+        self.setLayout(layout)
+
+    def generateMenu(self, pos):
+        print(pos)
+        for i in self.tablewidget.selectionModel().selection().indexes():
+            rowNum = i.row()
+        # 如果选择的行索引小于2，弹出上下文菜单
+        if rowNum < 2:
+            menu = QMenu()
+            item1 = menu.addAction('菜单项1')
+            item2 = menu.addAction('菜单项2')
+            item3 = menu.addAction('菜单项3')
+            screenPos = self.tablewidget.mapToGlobal(pos)
+            print(screenPos)
+            # 被阻塞
+            action = menu.exec(screenPos)
+            if action == item1 :
+                print('选择了第1个菜单项', self.tablewidget.item(rowNum, 0).text(),
+                                            self.tablewidget.item(rowNum, 1).text(),
+                                            self.tablewidget.item(rowNum, 2).text())
+            elif action == item2:
+                print('选择了第2个菜单项', self.tablewidget.item(rowNum, 0).text(),
+                      self.tablewidget.item(rowNum, 1).text(),
+                      self.tablewidget.item(rowNum, 2).text())
+            elif action == item3:
+                print('选择了第3个菜单项', self.tablewidget.item(rowNum, 0).text(),
+                      self.tablewidget.item(rowNum, 1).text(),
+                      self.tablewidget.item(rowNum, 2).text())
+            else:
+                return
+
+
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    mainWin = TableWidgetContextMenuDemo()
+    mainWin.show()
+    sys.exit(app.exec_())
