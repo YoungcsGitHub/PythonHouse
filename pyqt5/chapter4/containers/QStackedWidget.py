@@ -53,7 +53,7 @@ class StackedExaple(QWidget):
         hbox.addWidget(self.stack)
         self.setLayout(hbox)
 
-        # self.list.currentRowChanged.connect(self.display)
+        self.list.currentRowChanged.connect(self.display)
 
 
     def tab1UI(self):

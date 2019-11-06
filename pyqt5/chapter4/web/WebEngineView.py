@@ -16,7 +16,6 @@ PyQt5 和 Web的交互技术
 同时使用python和web开发程序， 混合开发
 
 '''
-
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
