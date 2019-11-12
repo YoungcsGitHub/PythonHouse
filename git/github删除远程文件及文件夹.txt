@@ -1,0 +1,21 @@
+﻿github删除远端文件及文件夹操作步骤：
+
+
+step1：将远端内容pull到本地对应的文件夹
+	git pull origin master
+
+step2：查看当前文件夹中内容
+
+	dir/ ls -a
+
+step3：删除操作
+	git rm -r --cached xxxxx(文件及文件夹名称）
+
+step4：提交删除信息
+	git commit -m "xxxxx"(双引号内部填写需要commit的操作)
+
+step5：将本次操作push到远端
+	git push origin master 
+
+
+注意： 一次删除多个文件及文件夹时，step3和step4可多次执行，删除需要删除的文件及文件夹。
