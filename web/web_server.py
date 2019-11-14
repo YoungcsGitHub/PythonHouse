@@ -44,7 +44,7 @@ class WSGIServer(object):
                 # print("*" * 50, file_name)
 
         # 2. 准备发送给浏览器的数据---body
-        # 2.1 如果请求的资源不是以.py结尾，那么就认为是静态资源（html/css/js/png,jpg等）
+        # 2.1 如果请求的资源不是以.html结尾，那么就认为是静态资源（html/css/js/png,jpg等）
         if not file_name.endswith(".html"):
             try:
                 f = open("./H171" + file_name, "rb")
