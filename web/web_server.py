@@ -19,7 +19,7 @@ class WSGIServer(object):
         self.tcp_server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.tcp_server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         # 2. 绑定
-        self.tcp_server_socket.bind(('192.168.1.3', 7890))
+        self.tcp_server_socket.bind(('', 7890))
         # 3. 监听
         self.tcp_server_socket.listen(128)
 
@@ -45,9 +45,9 @@ class WSGIServer(object):
 
         # 2. 准备发送给浏览器的数据---body
         # 2.1 如果请求的资源不是以.py结尾，那么就认为是静态资源（html/css/js/png,jpg等）
-        if not file_name.endswith(".py"):
+        if not file_name.endswith(".html"):
             try:
-                f = open("./H1153" + file_name, "rb")
+                f = open("./H171" + file_name, "rb")
             except:
                 response = "HTTP/1.1 404 NOT FOUND\r\n"
                 response += "\r\n"
@@ -87,7 +87,6 @@ class WSGIServer(object):
         self.status = status
         self.headers = [("server", "mini_web v8.8")]
         self.headers += headers
-
 
     def run_forever(self):
         """用来完成整体的控制"""
