@@ -25,7 +25,13 @@ def route(url):
 
 @route("/index.html")
 def index():
-    with open("./H1153/index.html") as f:
+    with open("./templates/index.html") as f:
+        content = f.read()
+    return content
+
+@route("/gallery.html")
+def index():
+    with open("./templates/gallery.html") as f:
         content = f.read()
     return content
 

@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-#
 
-#-------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 # Name:         web_server
 # Description:  
 # Author:       Dell
 # Date:         2019/11/12
-#-------------------------------------------------------------------------------
-
+# -------------------------------------------------------------------------------
+import sys
 import socket
 import re
 import multiprocessing
@@ -47,7 +47,7 @@ class WSGIServer(object):
         # 2.1 如果请求的资源不是以.html结尾，那么就认为是静态资源（html/css/js/png,jpg等）
         if not file_name.endswith(".html"):
             try:
-                f = open("./H171" + file_name, "rb")
+                f = open("./H1153" + file_name, "rb")
             except:
                 response = "HTTP/1.1 404 NOT FOUND\r\n"
                 response += "\r\n"
@@ -107,6 +107,17 @@ class WSGIServer(object):
 
 def main():
     """控制整体，创建一个web服务器对象，然后调用这个对象的run_forever方法运行"""
+    # if len(sys.argv) == 2:
+    #     try:
+    #         port = int(sys.argv[1])
+    #     except Exception as ret:
+    #         print("端口输入错误...")
+    #         return
+    # else:
+    #     print("请按照以下方式运行：")
+    #     print("python3 xxx.py 7890")
+    #     return
+
     wsgi_server = WSGIServer()
     wsgi_server.run_forever()
 
