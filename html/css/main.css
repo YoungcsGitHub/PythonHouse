@@ -1,0 +1,159 @@
+
+
+
+.menu{
+    width: 694px;
+    height: 50px;
+    /*background-color: cyan;*/
+    margin: 50px auto 0;
+    font-size: 0;
+}
+
+.menu a{
+    width: 98px;
+    height: 48px;
+    background-color: #fff;
+    display: inline-block;
+    border: 1px solid gold;
+    font-size: 16px;
+    margin-left: -1px;
+    text-align: center;
+    line-height: 48px;
+    text-decoration: none;
+    color: pink;
+    font-family: "Microsoft YaHei UI";
+}
+
+.menu a:hover{
+    background-color: gold;
+    color: #fff;
+}
+
+.menu1{
+    width: 694px;
+    height: 50px;
+    /*background-color: cyan;*/
+    /*去掉小圆点*/
+    list-style: none;
+    /*去掉默认margin和padding*/
+    margin: 50px auto 0;
+    padding: 0;
+}
+
+.menu1 li{
+    width: 98px;
+    height: 48px;
+    border: 1px solid gold;
+    background-color: #fff;
+    /*display: inline-block;*/
+    float: left;
+    margin-left: -1px;
+}
+
+.menu1 li a{
+    background-color: white;
+    display: block;
+    width: 98px;
+    height: 48px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Microsoft YaHei UI";
+    line-height: 48px;
+}
+
+.menu1 li a:hover{
+    background-color: gold;
+    color: white;
+}
+
+/*!*盒子模型*!*/
+/*.box{*/
+/*    width:1200px;*/
+/*    height: 400px;*/
+/*    background-color: gold;*/
+
+/*    !*border-top-color: #000000;*!*/
+/*    !*border-top-width: 10px;*!*/
+/*    !*!*实线：solid   虚线：dashed  点线：dotted*!*!*/
+/*    !*border-top-style: dashed;*!*/
+/*    !*换一种写法*!*/
+/*    !*border-top: 10px solid #000;*!*/
+/*    !*border-left: 10px dashed #000;*!*/
+/*    !*border-right: 10px dashed #000;*!*/
+/*    !*border-bottom: 10px dashed #000;*!*/
+/*    !*再换一种写法*!*/
+/*    border: 10px solid #000;*/
+
+/*    !*padding-top:20px;*!*/
+/*    !*padding-left: 40px;*!*/
+/*    !*padding-right: 80px;*!*/
+/*    !*padding-bottom: 100px;*!*/
+/*    !*由上方开始顺时针方向*!*/
+/*    !*padding: 20px 80px 100px 40px;*!*/
+/*    !*只设置三个参数设置上，左右，下*!*/
+/*    !*padding: 20px 80px 100px;*!*/
+/*    !*只设置2个参数，分别设置上下和左右*!*/
+/*    !*padding: 20px 80px;*!*/
+/*    !*只设置1个参数，设置上下左右均为同一个值*!*/
+/*    padding: 20px;*/
+
+/*    !*设置盒子与屏幕四周的距离，与内部设置类似*!*/
+/*    margin: 100px;*/
+/*}*/
+
+/*!* *{ }选择所有的标签*!*/
+/**{*/
+
+/*}*/
+/*!*类选择器*!*/
+/*.green{*/
+/*    color: #0f0;*/
+/*}*/
+/*.big{*/
+/*    font-size: 40px;*/
+/*}*/
+/*div{*/
+/*    font-size: 20px;*/
+/*    color: brown;*/
+/*    font-family: 'Microsoft YaHei UI';*/
+/*    font-style: italic;*/
+/*}*/
+/*!*id选择器*!*/
+/*#p1{*/
+/*    font-size: 20px;*/
+
+/*    !*十六进制表示颜色*!*/
+/*    !*color: #a54d9f;*!*/
+
+/*    !*rgb三原色表示颜色方法*!*/
+/*    !*color: rgb(255,100,12);*!*/
+
+/*    !*精确颜色表示法*!*/
+/*    color: green;*/
+
+/*    font-family: 'Microsoft YaHei UI';*/
+/*    font-style: italic;*/
+/*    line-height: 50px;*/
+/*}*/
+/*em{*/
+/*    font-size: 40px;*/
+/*    color: #2fa559;*/
+/*    font-family: 'Microsoft YaHei UI';*/
+/*    font-style: normal;*/
+/*}*/
+
+/*span{*/
+/*    font-size: 60px;*/
+/*    color: #1b51a5;*/
+/*    font-family: 'Microsoft YaHei UI';*/
+/*    font-style: normal;*/
+/*}*/
+/*h1{*/
+/*    font-size: 100px;*/
+/*    color: #682ba5;*/
+/*    font-family: 'Microsoft YaHei UI';*/
+/*    font-style: normal;*/
+/*    font-weight:normal;*/
+/*}*/
+

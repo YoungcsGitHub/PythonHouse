@@ -1,0 +1,68 @@
+
+body{
+    margin: 0;
+}
+
+
+.menu{
+    height: 50px;
+    background-color: #1e1e1e;
+}
+
+.menu a{
+    width: 100px;
+    display: inline-block;
+    text-decoration: none;
+    color: #a3a2a2;
+    font-family: "Microsoft YaHei UI";
+    font-size: 20px;
+    text-align: center;
+    line-height: 45px;
+}
+
+.menu a:hover{
+    color: #c8c8c8;
+    font-size: 18px;
+}
+
+.nbsp{
+    height: 40px;
+    line-height: 50px;
+    background-color: #7cb6b6;
+}
+
+.nbsp:before{
+    content:"\2003\2003\2003\2003\2003\2003\2003";
+
+}
+
+.menu1{
+    width: 1640px;
+    height: 50px;
+    /*background-color: #7cb6b6;*/
+    list-style: none;
+    margin: 10px auto 0;
+    border-top: 1px solid #c8c8c8;
+    padding: 0;
+}
+
+.menu1 li{
+    width: 150px;
+    height: 48px;
+    background-color: #ffffff;
+    float: left;
+    margin-left: -1px;
+}
+
+.menu1 li a{
+    display: block;
+    text-decoration: none;
+    color:black;
+    line-height: 48px;
+    /*display: inline-block;*/
+}
+
+.menu1 li a:hover{
+    /*background-color: #4a4a4f;*/
+    color: cornflowerblue;
+}
