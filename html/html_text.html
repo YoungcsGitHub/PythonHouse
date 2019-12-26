@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人主页</title>
+<!--    第一种插入样式的方式-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+<!--    第二种插入样式的方式-->
+    <style type="text/css">
+        /*h1{*/
+        /*    font-size: 20px;*/
+        /*    color: green;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+    <h1>个人主页</h1>
+<!--    div + a 做菜单-->
+    <div class="menu">
+        <a href="#">首页</a>
+        <a href="#">公司简介</a>
+        <a href="#">解决方案</a>
+        <a href="#">公司新闻</a>
+        <a href="#">行业动态</a>
+        <a href="#">招贤纳才</a>
+        <a href="#">联系我们</a>
+    </div>
+    <br />
+    <br />
+    <br />
+<!--    ul li + a做菜单-->
+    <ul class="menu1">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">公司简介</a></li>
+        <li><a href="#">解决方案</a></li>
+        <li><a href="#">公司新闻</a></li>
+        <li><a href="#">行业动态</a></li>
+        <li><a href="#">招贤纳才</a></li>
+        <li><a href="#">联系我们</a></li>
+    </ul>
+    <br />
+    你好！ 欢迎访问我的个人主页<br />
+    <img src="images/logo.jpg" alt="logo"    />
+    <h3>工作交接</h3>
+    <p class="box">
+        <span>·了解公司的<em>企业文化</em>、&nbsp<em>规章制度</em>、<em>发展目标</em>、<em>长期愿景</em>等；</span><br />
+        ·对公司现有<i>产品</i>以及项目进行理解并消化。同时了解岗位职责、技能需求；<br />
+        ·参与员工培训
+    </p>
+    <p id="p1">
+        ·了解公司的企业文化，&nbsp规章制度、发展目标、长期愿景等；<br />
+        ·对公司现有产品以及项目进行理解并消化。同时了解<b>岗位职责</b>、<strong>技能需求</strong>；<br />
+        ·参与员工培训
+    </p>
+    <p class="green big">
+        <a href="xhtml_text.html" title="去到XHTML页面" target="_blank" ><img src="images/logo.jpg" alt="logo"></a>
+        <a href="#">#缺省链接</a>
+    </p>
+
+    <h2>二级标题</h2>
+    <div>
+        <h3>有序列表</h3>
+        <ol>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+        </ol>
+        <!-- 有序列表快捷键ol>li*3 -->
+        <ol>
+            <li>新闻标题1</li>
+            <li>新闻标题2</li>
+            <li>新闻标题3</li>
+        </ol>
+        <h3>无序列表</h3>
+        <ul>
+            <li><a href="#">新闻标题4</a></li>
+            <li><a href="#">新闻标题5</a></li>
+            <li><a href="#">新闻标题6</a></li>
+        </ul>
+        <h3>有序列表</h3>
+        <dl>
+            <dt>html</dt>
+            <dd>负责页面结构</dd>
+            <dt>css</dt>
+            <dd>负责页面的表现</dd>
+            <dt>JavaScript</dt>
+            <dd>负责页面的行为</dd>
+        </dl>
+
+    </div>
+
+    <h2>表格</h2>
+    <table border="1" width="300" height="200" align="center">
+        <tr>
+
+            <th bgcolor="aqua">1</th>
+            <th>2</th>
+            <th>3</th>
+
+        </tr>
+        <tr>
+            <td align="center">1</td>
+            <td>2</td>
+            <td>3</td>
+
+        </tr>
+        <tr>
+            <td>1</td>
+            <td align="center" valign="middle">2</td>
+            <td>3</td>
+
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+
+        </tr>
+    </table>
+
+    <table border="1" width="600" height="300" align="center">
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <tr>
+            <td colspan="5" height="50">基本情况</td>
+
+        </tr>
+        <tr>
+            <td width="15%"></td>
+            <td width="25%"></td>
+            <td width="15%"></td>
+            <td width="25%"></td>
+            <td rowspan="5" width="20%"><img src="images/证件照.0jpg" alt="证件照"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h3>注册表单</h3>
+    <form action="" method="post">
+        <p>
+        <label for="username">用户名:</label>
+            <label>
+                <input type="text" name="username" id="username"/>
+            </label>
+        </p>
+
+        <p>
+        <label>密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+            <label>
+                <input type="password" name="password" />
+            </label>
+        </p>
+
+        <p>
+        <label>性&nbsp;&nbsp;&nbsp;&nbsp;别:</label>
+            <label>
+                <input type="radio" name="gender" value="0" id="male" />
+            </label> <label for="male">男</label>
+            <label>
+                <input type="radio" name="gender" value="1" id="female"/>
+            </label> <label for="female">女</label>
+            <label>
+                <input type="radio" name="gender" value="2" id="midmale" />
+            </label> <label for="midmale">中性</label>
+        </p>
+
+        <p>
+        <label>爱&nbsp;&nbsp;&nbsp;&nbsp;好:</label>
+            <label>
+                <input type="checkbox" name="" />
+            </label> 学习
+            <label>
+                <input type="checkbox" name="like" value="play"   />
+            </label> 篮球
+            <label>
+                <input type="checkbox" name="like" value="music"  />
+            </label> music
+            <label>
+                <input type="checkbox" name="like" value="lesson" />
+            </label> python
+            <label>
+                <input type="checkbox" name="like" value="beauty" />
+            </label> 美少女
+        </p>
+
+         <p>
+        <label>玉&nbsp;&nbsp;&nbsp;&nbsp;照:</label>
+        <input type="file" name="" />
+        </p>
+
+        <p>
+        <label>个人介绍:</label>
+            <label>
+                <textarea name="introduce"></textarea>
+            </label>
+        </p>
+
+        <p>
+        <label>籍&nbsp;&nbsp;&nbsp;&nbsp贯:</label>
+            <label>
+                <select name="site">
+                    <option value="0">北京</option>
+                    <option value="1">上海</option>
+                    <option value="2">广州</option>
+                    <option value="3">深圳</option>
+                    <option value="4">珠海</option>
+                    <option value="5">西安</option>
+                </select>
+            </label>
+        </p>
+
+        <p>
+<!--        <input type="submit" name="" value="提交">-->
+        <input type="image" src="images/gallery-next.jpg" name=""  alt="132">
+        <input type="reset" name="" value="重置">
+        </p>
+
+        <p>
+        <input type="hidden"  name="hidden01" value="12" >
+        </p>
+
+
+
+    </form>
+
+    <div>这是一个div标签</div>
+
+
+
+
+</body>
+</html>
+
+
+

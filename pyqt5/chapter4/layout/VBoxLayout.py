@@ -30,6 +30,12 @@ class VBoxLayout(QWidget):
         self.setWindowTitle('VBoxLayout Demo')
         self.resize(430, 230)
 
+        label = QLabel()
+        label.setStyleSheet("background-color:red")
+        label.resize(20, 50)
+        label.setText('1555555555555555555555555555')
+        label.setWordWrap(True)
+
         vlayout = QVBoxLayout()
         vlayout.addWidget(QPushButton('按钮1'))
         vlayout.addWidget(QPushButton('按钮2'))
@@ -37,6 +43,8 @@ class VBoxLayout(QWidget):
         vlayout.addWidget(QPushButton('按钮4'))
         vlayout.addWidget(QPushButton('按钮5'))
         vlayout.addWidget(QPushButton('按钮6'))
+
+        # vlayout.addWidget(label)
         vlayout.setSpacing(40)
         self.setLayout(vlayout)
 

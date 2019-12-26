@@ -30,6 +30,7 @@ class QLabelDemo(QWidget):
         # 支持附文本<font color = yellow>XXXXXXX</font>
         label1.setText('<font color = yellow>这是一个文本标签</font>')
         label1.setAutoFillBackground(True)
+        # label1.setWordWrap(True)
         palette = QPalette()
         palette.setColor(QPalette.Window, Qt.blue) # 设置背景颜色
         label1.setPalette(palette)
