@@ -18,7 +18,7 @@ class API(object):
 
 
 class APITool(QObject):
-    session = requests.session()
+    session = requests.Session()
 
     @classmethod
     def download_yzm(cls):
