@@ -74,17 +74,20 @@ class calcMethod(QWidget):
         # self.calculate()
 
     def calculate(self):
-        num1 = float(self.numline1.text())
-        ADC = float(self.numline2.text())
-        print(self.numline2.text())
-        num2 = float(self.numline3.text())
-        amplification = float(self.numline4.text())
-        if  ADC and amplification == None:
-            QMessageBox.information(QWidget, "warning", " %s " % "ADC 和 amplification 数值为空！")
-
-        else:
-            self.value = num1 * ADC / num2 / amplification
-
+        while True:
+            if self.numline4.text() and self.numline2.text() is not '':
+                try:
+                    num1 = float(self.numline1.text())
+                    ADC = float(self.numline2.text())
+                    # print(self.numline2.text())
+                    num2 = float(self.numline3.text())
+                    amplification = float(self.numline4.text())
+                    self.value = num1 * ADC / num2 / amplification
+                except Exception as ret:
+                    print(ret)
+            else:
+                QMessageBox.information(self, "warning", " %s " % "ADC 和 amplification 数值为空！")
+            break
 
     def btnclicked(self):
         self.calculate()
